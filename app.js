@@ -6,6 +6,8 @@ const api = require("./routes/api");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // aka bodyparser
 
+console.log(process.env);
+
 // serve static directories
 app.use(express.static("public")); // static html landingpage, favicons, etc
 
