@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { createUsers } = require("../../model");
 
-router.post("/interest", async (req, res, next) => {
+router.post("/csv", async (req, res, next) => {
   createUsers(req.body.token);
   res.status(200);
 });

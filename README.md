@@ -9,3 +9,8 @@ Server for the electrade app
 
     # Start development server
     yarn run dev
+
+
+## Create migration for:
+
+`create table users(id text);`
