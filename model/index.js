@@ -1,15 +1,16 @@
 const { Client } = require("pg");
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ...(process.env.NODE_ENV !== "development" && {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  }),
 });
 client.connect();
 
 exports.getUsers = async () => {
   const { rows } = await client.query(`SELECT id FROM users;`);
-  console.log(rows);
   return rows;
 };
 
