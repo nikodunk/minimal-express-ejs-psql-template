@@ -4,7 +4,7 @@ const { createUsers } = require("../../model");
 
 router.post("/csv", async (req, res, next) => {
   await createUsers(req.body.token);
-  res.send("worked").status(200);
+  res.redirect("/");
 });
 
 module.exports = router;
