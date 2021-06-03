@@ -4,6 +4,7 @@ client.connect();
 
 exports.getUsers = async () => {
   const { rows } = await client.query(`SELECT id FROM users;`);
+  console.log(rows);
   return rows;
 };
 
