@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/nav'); %>
+</header>
+
+<main>
+    <div class="jumbotron" style="background-color: white;">
+        <h1>Results</h1>
+
+        <% queries.forEach((qa) => { %>
+            Query "<strong><%= qa.id %></strong>"</li>
+            <hr/>
+        <% }) %>
+            
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

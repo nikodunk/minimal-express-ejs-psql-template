@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/nav'); %>
+</header>
+
+<main>
+    <div class="jumbotron" style="background-color: white;">
+        <div style=" max-width: 300px; margin: 0 auto; margin-top: 100px">
+            <p>Please upload a csv with a single 'query' column and as many rows as you need.</p>
+            <p>This app will return the Rank Difficulty for each query by looking up the DA for the top 10 links for every query.</p>
+            <br/><br/>
+            <form action="/api/csv" method="post">
+                <input type="text" name="token" placeholder="your ahrefs token" style="width: 100%"><br/><br/>
+                <input type="submit" class="" value="Upload" tabindex="1" style="width: 100%">
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
